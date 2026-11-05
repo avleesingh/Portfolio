@@ -85,7 +85,7 @@ export default function Hero() {
               <ArrowDown className="h-4 w-4" aria-hidden />
             </a>
             <a
-              href="/resume.pdf?v=2"
+              href="/resume.pdf?v=3"
               target="_blank"
               rel="noopener noreferrer"
               download="resume.pdf"
