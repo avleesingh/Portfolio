@@ -1,0 +1,91 @@
+"use client";
+
+import { motion } from "framer-motion";
+import { ArrowDown, Download } from "lucide-react";
+
+function LinkedinIcon({ className }: { className?: string }) {
+  return (
+    <svg
+      xmlns="http://www.w3.org/2000/svg"
+      viewBox="0 0 24 24"
+      fill="none"
+      stroke="currentColor"
+      strokeWidth="2"
+      strokeLinecap="round"
+      strokeLinejoin="round"
+      className={className}
+      aria-hidden="true"
+    >
+      <path d="M16 8a6 6 0 0 1 6 6v7h-4v-7a2 2 0 0 0-2-2 2 2 0 0 0-2 2v7h-4v-7a6 6 0 0 1 6-6z" />
+      <rect width="4" height="12" x="2" y="9" />
+      <circle cx="4" cy="4" r="2" />
+    </svg>
+  );
+}
+
+const LINKEDIN_URL = "https://www.linkedin.com/in/avleesingh";
+
+export default function Hero() {
+  return (
+    <section
+      id="hero"
+      className="scroll-mt-20 border-b border-purple-200/60 bg-gradient-to-b from-rose-200 via-pink-100 to-purple-200 px-6 pb-24 pt-20 sm:pb-32 sm:pt-28 transition-colors duration-700 ease-in-out"
+    >
+      <div className="mx-auto max-w-5xl">
+        <motion.div
+          initial={{ opacity: 0, y: 16 }}
+          animate={{ opacity: 1, y: 0 }}
+          transition={{ duration: 0.6, ease: "easeOut" }}
+        >
+          <h1 className="max-w-3xl text-4xl font-bold tracking-tight text-gray-900 sm:text-6xl">
+            Avlee Singh — Product &amp; Engineering
+          </h1>
+
+          {/* About Me / Personal Brand Hook */}
+          <div className="mt-6 max-w-2xl rounded-3xl border border-white/90 bg-white/75 p-6 sm:p-7 shadow-lg backdrop-blur-xl">
+            <p className="text-base sm:text-lg leading-relaxed text-gray-800">
+              As an engineering student, I have built and shipped{" "}
+              <span className="inline-flex items-center rounded-md border border-blue-200 bg-blue-50 px-2 py-0.5 font-semibold text-blue-700 shadow-xs">
+                6+ products (software and embedded)
+              </span>
+              . While working on so many distinct projects over the years, I realized that I enjoy deciding{" "}
+              <span className="font-bold bg-gradient-to-r from-purple-700 via-indigo-700 to-blue-700 bg-clip-text text-transparent">
+                what to build and why
+              </span>{" "}
+              far more than just the mechanics of building it. I am glad I stuck to this realization—it introduced me to the world of Product Management!
+            </p>
+          </div>
+
+          <div className="mt-8 flex flex-wrap gap-3">
+            <a
+              href="#beti"
+              className="inline-flex items-center gap-2 rounded-full bg-gray-900 px-5 py-2.5 text-sm font-semibold text-white shadow-md transition hover:bg-gray-800 focus-visible:outline focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-gray-900"
+            >
+              Explore Case Studies
+              <ArrowDown className="h-4 w-4" aria-hidden />
+            </a>
+            <a
+              href="/resume.pdf"
+              target="_blank"
+              rel="noopener noreferrer"
+              download
+              className="inline-flex items-center gap-2 rounded-full border border-white/90 bg-white/80 backdrop-blur-md px-5 py-2.5 text-sm font-semibold text-gray-900 shadow-md transition hover:bg-white focus-visible:outline focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-gray-900"
+            >
+              <Download className="h-4 w-4" aria-hidden />
+              Download Resume
+            </a>
+            <a
+              href={LINKEDIN_URL}
+              target="_blank"
+              rel="noopener noreferrer"
+              className="inline-flex items-center gap-2 rounded-full border border-white/90 bg-white/80 backdrop-blur-md px-5 py-2.5 text-sm font-semibold text-gray-900 shadow-md transition hover:bg-white focus-visible:outline focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-gray-900"
+            >
+              <LinkedinIcon className="h-4 w-4" />
+              Connect on LinkedIn
+            </a>
+          </div>
+        </motion.div>
+      </div>
+    </section>
+  );
+}
