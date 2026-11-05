@@ -85,10 +85,10 @@ export default function Hero() {
               <ArrowDown className="h-4 w-4" aria-hidden />
             </a>
             <a
-              href="/resume.pdf"
+              href="/resume.pdf?v=2"
               target="_blank"
               rel="noopener noreferrer"
-              download
+              download="resume.pdf"
               className="inline-flex items-center gap-2 rounded-full border border-white/90 bg-white/80 backdrop-blur-md px-5 py-2.5 text-sm font-semibold text-gray-900 shadow-md transition hover:bg-white focus-visible:outline focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-gray-900"
             >
               <Download className="h-4 w-4" aria-hidden />
