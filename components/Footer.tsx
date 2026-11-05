@@ -45,7 +45,7 @@ function GithubIcon({ className }: { className?: string }) {
 const links = [
   {
     label: "LinkedIn",
-    href: "https://www.linkedin.com/in/avleesingh",
+    href: "https://www.linkedin.com/in/avlee-singh-7bb282344/",
     icon: LinkedinIcon,
     external: true,
   },
